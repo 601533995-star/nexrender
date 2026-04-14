@@ -1,0 +1,428 @@
+/* 🎨 NexRender Professional UI Styles */
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #06b6d4;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --surface-dark: #1e293b;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --border-dark: #374151;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --radius: 0.5rem;
+    --radius-lg: 0.75rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Professional Header */
+.nexrender-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.nexrender-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    background: linear-gradient(45deg, #ffffff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nexrender-header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.nexrender-header .version-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Professional Cards */
+.nexrender-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.nexrender-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.nexrender-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.nexrender-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.nexrender-card-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius);
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Professional Buttons */
+.nexrender-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nexrender-btn-primary {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.nexrender-btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.nexrender-btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.nexrender-btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.nexrender-btn-premium {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    position: relative;
+}
+
+.nexrender-btn-premium::before {
+    content: '👑';
+    margin-right: 0.5rem;
+}
+
+.nexrender-btn-premium:hover {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Dashboard Layout */
+.nexrender-dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    gap: 0;
+}
+
+.nexrender-sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.nexrender-main {
+    padding: 2rem;
+    background: var(--background);
+}
+
+.nexrender-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nexrender-nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.nexrender-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+}
+
+.nexrender-nav-link:hover {
+    background: var(--background);
+    color: var(--text-primary);
+}
+
+.nexrender-nav-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Progress Bars */
+.nexrender-progress {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.nexrender-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--radius);
+    transition: width 0.3s ease;
+}
+
+/* Status Indicators */
+.nexrender-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.nexrender-status.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.nexrender-status.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+}
+
+.nexrender-status.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error-color);
+}
+
+.nexrender-status.processing {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+}
+
+/* Premium Feature Lock */
+.nexrender-premium-lock {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.nexrender-premium-lock::after {
+    content: '🔒';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--warning-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+/* Upgrade Modal */
+.nexrender-upgrade-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.nexrender-upgrade-modal .modal-content {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.nexrender-upgrade-modal h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.nexrender-upgrade-modal .features-preview {
+    background: var(--background);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.nexrender-upgrade-modal .features-preview h4 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.nexrender-upgrade-modal .features-preview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nexrender-upgrade-modal .features-preview li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nexrender-upgrade-modal .modal-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Analytics Dashboard */
+.nexrender-analytics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.nexrender-metric {
+    text-align: center;
+}
+
+.nexrender-metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.nexrender-metric-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nexrender-dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    
+    .nexrender-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .nexrender-main {
+        padding: 1rem;
+    }
+    
+    .nexrender-header h1 {
+        font-size: 2rem;
+    }
+    
+    .nexrender-analytics {
+        grid-template-columns: 1fr;
+    }
+    
+    .nexrender-upgrade-modal .modal-content {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .nexrender-upgrade-modal .modal-actions {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0f172a;
+        --surface: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+        --border: #334155;
+    }
+}
